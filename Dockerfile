@@ -1,3 +1,6 @@
-FROM splazit:tomcat-app
-ENV TOMCAT_VERSION_MAJOR 10
-ENV TOMCAT_VERSION_FULL 10.0.8
+FROM tomcat:9.0-jre8-alpine
+#FROM tomcat:8.5-jre8-alpine
+RUN apk --no-cache --update add ca-certificates openssl fontconfig ttf-dejavu wget
+ENV WAR_URL=""
+COPY run.sh /usr/local/tomcat/bin/run-app.sh
+CMD ["run.sh"]
