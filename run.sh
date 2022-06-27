@@ -1,3 +1,4 @@
+#!/bin/sh
 WAR_FILE=${WAR_URL:7}
 WAR_FILE=${WAR_FILE##*/}
 if [ -f "$CATALINA_HOME/webapps/$WAR_FILE" ];
