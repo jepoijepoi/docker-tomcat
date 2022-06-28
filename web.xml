@@ -4734,8 +4734,9 @@
     </welcome-file-list>
 
     <error-page>
-        <error-code>500</error-code>
-        <location>/server_error.html</location>
+        <location>/WEB-INF/jsp/error.html</location>
+        <location>/WEB-INF/jsp/error.htm</location>
+        <location>/WEB-INF/jsp/error.jsp</location>
     </error-page>
 
 </web-app>
